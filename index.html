@@ -3,59 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube Data Analysis Project</title>
+    <title>YouTube Content Performance Analysis Report</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
-            color: #24292e;
-            max-width: 800px;
+            color: #333;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 2rem;
-            background-color: #f6f8fa;
+            background-color: #ffffff;
         }
         
-        h1, h2 {
-            border-bottom: 2px solid #e1e4e8;
+        h1, h2, h3 {
+            color: #1a1a1a;
+            margin-top: 2em;
             padding-bottom: 0.3em;
-            color: #1a237e;
+            border-bottom: 1px solid #eaecef;
         }
         
-        .container {
-            background-color: white;
-            padding: 2rem;
+        .section {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background-color: #ffffff;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         
-        .hypothesis {
+        .executive-summary {
             background-color: #f8f9fa;
-            border-left: 4px solid #1a237e;
-            padding: 1rem;
-            margin: 1rem 0;
+            padding: 1.5rem;
+            border-left: 4px solid #1a1a1a;
+            margin: 2rem 0;
         }
         
-        .introduction {
-            margin-bottom: 2rem;
+        .visualization-analysis {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.5rem 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+        
+        .code {
+            background-color: #f6f8fa;
+            padding: 1rem;
+            border-radius: 4px;
+            font-family: monospace;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>YouTube Analysis: Uncovering Success Patterns</h1>
+    <h1>YouTube Content Performance Analysis: A Data Science Investigation</h1>
+    
+    <div class="executive-summary">
+        <h2>Executive Summary</h2>
+        <p>This comprehensive analysis examines YouTube video performance metrics using data from Kaggle's YouTube dataset. The study investigates the relationships between engagement metrics, content characteristics, and viewing patterns to identify key success factors in content creation and distribution. Through statistical analysis and data visualization, we aim to uncover patterns that could predict video performance.</p>
+    </div>
+
+    <div class="section">
+        <h2>Research Questions and Hypotheses</h2>
+        <p>The primary hypothesis driving this research was that through comprehensive data analysis, we can identify patterns that predict video success or failure on YouTube. Specifically:</p>
         
-        <div class="introduction">
-            <h2>Introduction</h2>
-            <p>This research project aims to analyze YouTube video data to uncover patterns in successful content creation, with a particular focus on title optimization. By examining a comprehensive dataset of YouTube videos, we seek to understand the relationship between video titles and performance metrics, potentially revealing insights that could help content creators optimize their content for better reach and engagement.</p>
+        <h3>Primary Hypothesis</h3>
+        <p>Using data analysis techniques on historical YouTube video performance, we can make reliable inferences about which videos are likely to succeed or fail based on measurable characteristics and patterns.</p>
+        
+        <h3>Secondary Research Questions</h3>
+        <ul>
+            <li>What correlation exists between different engagement metrics (views, likes, comments)?</li>
+            <li>How do specific keywords in titles impact video performance?</li>
+            <li>What patterns emerge in the distribution of likes versus dislikes?</li>
+            <li>How does timing of publication affect video performance?</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Methodology and Technical Implementation</h2>
+        
+        <h3>Data Acquisition and Processing</h3>
+        <p>The dataset was obtained from Kaggle's YouTube data repository (https://www.kaggle.com/datasets/datasnaek/youtube-new). Initial processing involved cleaning and formatting to ensure consistency and usability.</p>
+        
+        <h3>Technical Tools and Implementation</h3>
+        <p>The analysis utilized a comprehensive suite of Python-based data science tools:</p>
+        <ul>
+            <li>Python programming language for core analysis</li>
+            <li>Pandas for data manipulation and analysis</li>
+            <li>NumPy for numerical computations</li>
+            <li>Matplotlib and Seaborn for visualization</li>
+            <li>Jupyter Notebooks for interactive development</li>
+        </ul>
+        
+        <p>Implementation was supported by various YouTube data science tutorials and community resources, providing guidance on visualization techniques and statistical analysis best practices.</p>
+    </div>
+
+    <div class="section">
+        <h2>Key Findings</h2>
+
+        <div class="visualization-analysis">
+            <h3>1. Keyword Impact Analysis</h3>
+            <p>Analysis of keyword correlations with engagement metrics reveals:</p>
+            <ul>
+                <li>Strong positive correlations between entertainment/music keywords and engagement</li>
+                <li>Highest correlation for trending topics (e.g., 'aot')</li>
+                <li>Consistent performance of platform-specific terms</li>
+            </ul>
         </div>
 
-        <div class="hypothesis">
-            <h2>Research Hypothesis</h2>
-            <p>We hypothesize that specific word patterns and linguistic elements in YouTube video titles significantly correlate with video performance metrics (views, likes, and engagement rates). Specifically:</p>
-            <p>1. Videos with titles containing emotion-evoking words or phrases will demonstrate higher engagement rates than those with neutral language.</p>
-            <p>2. The presence of certain keywords and phrases in titles will show a strong correlation with view counts, suggesting optimal patterns for title construction.</p>
-            <p>3. Title length and structure (including the use of numbers, questions, or capital letters) will show measurable impacts on video performance.</p>
+        <div class="visualization-analysis">
+            <h3>2. Engagement Distribution</h3>
+            <p>Analysis of likes and comments distribution shows:</p>
+            <ul>
+                <li>Most videos receive 0-200k engagements</li>
+                <li>Rare cases exceed 1.5M likes</li>
+                <li>Lower comment rates compared to likes, indicating viewer preference for simple engagement</li>
+            </ul>
         </div>
+
+        <div class="visualization-analysis">
+            <h3>3. View Count Distribution</h3>
+            <p>View count analysis reveals:</p>
+            <ul>
+                <li>Power-law distribution in performance</li>
+                <li>Top performers reaching 30M+ views</li>
+                <li>Logarithmic decline in view counts</li>
+                <li>Title structure influencing performance</li>
+            </ul>
+        </div>
+
+        <div class="visualization-analysis">
+            <h3>4. Like-to-Dislike Ratio</h3>
+            <p>Distribution analysis shows:</p>
+            <ul>
+                <li>Most videos maintain ratios between 0-250</li>
+                <li>Sharp decline after initial peak</li>
+                <li>Extreme ratios (>1000) indicating exceptional content</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Business Implications</h2>
+        <ul>
+            <li>Content optimization should focus on metrics showing strong correlation with views</li>
+            <li>Understanding engagement distribution helps set realistic goals</li>
+            <li>Title and keyword optimization remains crucial</li>
+            <li>Different engagement types indicate varying levels of viewer commitment</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Conclusions</h2>
+        <p>This analysis demonstrates the complex interplay between factors affecting YouTube video performance. Success requires understanding both content creation and audience engagement patterns. The findings suggest that while predicting exact video performance is challenging, clear patterns emerge that can guide content strategy.</p>
+        
+        <p>The extensive dataset analysis revealed both challenges and opportunities in processing large-scale social media data. While initial data processing presented technical challenges, the resulting insights provide valuable guidance for content creators and marketers in optimizing their YouTube strategy.</p>
     </div>
 </body>
 </html>
